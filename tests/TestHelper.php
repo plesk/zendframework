@@ -20,20 +20,6 @@
  * @version    $Id$
  */
 
-/**
- * Include PHPUnit dependencies
- */
-if (version_compare(PHPUnit_Runner_Version::id(), '4.0.0', '<')) {
-    require_once 'PHPUnit/Runner/Version.php';
-
-    $phpunitVersion = PHPUnit_Runner_Version::id();
-    if ($phpunitVersion == '@package_version@' || version_compare($phpunitVersion, '3.5.5', '>=')) {
-        require_once 'PHPUnit/Autoload.php'; // >= PHPUnit 3.5.5
-    } else {
-        require_once 'PHPUnit/Framework.php'; // < PHPUnit 3.5.5
-    }
-}
-
 /*
  * Set error reporting to the level to which Zend Framework code must comply.
  */
@@ -85,3 +71,4 @@ unset($zfRoot, $zfCoreLibrary, $zfCoreTests, $path);
 // Suppress DateTime warnings
 date_default_timezone_set(@date_default_timezone_get());
 
+define('PHPUnit_MAIN_METHOD', false);
