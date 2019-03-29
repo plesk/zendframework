@@ -442,6 +442,7 @@ class Zend_View_Helper_HeadLink extends Zend_View_Helper_Placeholder_Container_S
         $type  = array_shift($args);
         $title = array_shift($args);
 
+        $extras = array();
         if(0 < count($args) && is_array($args[0])) {
             $extras = array_shift($args);
             $extras = (array) $extras;
