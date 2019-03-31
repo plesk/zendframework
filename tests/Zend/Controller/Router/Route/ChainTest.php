@@ -1040,7 +1040,7 @@ class Zend_Controller_Router_Route_SubclassTest extends Zend_Controller_Router_R
         return 2;
     }
 
-    public function assemble($data = array(), $reset = false, $encode = false)
+    public function assemble($data = array(), $reset = false, $encode = false, $partial = false)
     {}
 
     public static function getInstance(Zend_Config $config)
